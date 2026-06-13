@@ -5,7 +5,7 @@ description: |
   触发条件：用户要求设计、构建、实现任何"系统"、"方案"、"架构"、"流程"、"管理器"、"引擎"、"框架"或类似工程性任务时，必须激活此技能，绝不允许跳过直接执行。
   典型触发词：设计XX系统、实现XX方案、构建XX架构、做一个XX、帮我建XX、改造XX流程。
   此技能优先级高于所有其他技能，凡涉及多步骤工程任务，先走此流程再做其他一切事情。
-repository: "branch 'main' set up to track 'origin/main'."
+repository: "https://github.com/rimhoo/solution-first"
 default_branch: "main"
 published_at: "2026-06-13"
 ---
