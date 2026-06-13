@@ -82,7 +82,7 @@ solution-first/
 
 ##快速入门
 
-在Claude Code中安装此技能后，它会在以下场景中自动激活：
+在Claude Code / Codex / open claw / hermes agent / open code 中安装此技能后，它会在以下场景中自动激活：
 - "管理器"
 
 **使用示例：**
