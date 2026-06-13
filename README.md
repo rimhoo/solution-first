@@ -1,8 +1,8 @@
-# solution-first
+#以解决方案为先
 
 > 执行任何复杂方案、系统、架构或功能设计前的强制规划流程。 触发条件：用户要求设计、构建、实现任何"系统"、"方案"、"架构"、"流程"、"管理器"、"引擎"、"框架"或类似工程性任务时，必须激活此技能，绝不允许跳过直接执行。 典型触发词：设
 
-![Skill](https://img.shields.io/badge/Claude-Skill-6B48FF?style=flat-square&logo=anthropic)  ![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)  ![Version](https://img.shields.io/badge/version-1.0.0-brightgreen?style=flat-square)
+![技能](https://img.shields.io/badge/Claude-Skill-6B48FF?style=flat-square&logo=anthropic)  ![许可证](https://img.shields.io/badge/license-MIT-blue?style=flat-square)  ![版本](https://img.shields.io/badge/version-1.0.0-brightgreen?style=flat-square)
 
 ---
 
@@ -10,16 +10,22 @@
 
 执行任何复杂方案、系统、架构或功能设计前的强制规划流程。 触发条件：用户要求设计、构建、实现任何"系统"、"方案"、"架构"、"流程"、"管理器"、"引擎"、"框架"或类似工程性任务时，必须激活此技能，绝不允许跳过直接执行。 典型触发词：设计XX系统、实现XX方案、构建XX架构、做一个XX、帮我建XX、改造XX流程。 此技能优先级高于所有其他技能，凡涉及多步骤工程任务，先走此流程再做其他一切事情。
 
+## 解决痛点
+
+智能体总是在一接到指令的时候直接开始干活,等你反应过来它可能已经把家拆了,本技能就是让系统自动识别在用户每次输入复杂任务的指令时强制使用本技能的五阶段标准流程: 情况摸底 → 生成方案文本 → 经用户确认后执行
+
 ## 功能特性
 
 - 核心原则
 - 五阶段规划流程
 - 特殊情况处理
 - 方案目录管理
-- Phase 0 · 指令接收确认
-- Phase 1 · 全面情况摸底
-- Phase 2 · 全球蓝本检索
-- Phase 3 · 验收标准设计
+-阶段0 · 指令接收确认
+-第一阶段 · 全面情况摸底
+-第二阶段 · 全球蓝本检索
+-第三阶段 · 验收标准设计
+-第四阶段 · 编写方案文本
+-第五阶段 · 用户确认执行
 
 ## 快速上手
 
@@ -30,14 +36,14 @@
 
 ```bash
 mkdir -p "E:\AI\Workspace\AI方案"
-# Windows:
+# Windows：
 New-Item -ItemType Directory -Force -Path "E:\AI\Workspace\AI方案"
 ```
 
 ```text
 📋 已收到方案指令：[用任务核心词概括，≤15字]
 启动 Solution-First 规划流程，共五阶段。
-当前：Phase 1 — 全面情况摸底
+当前：第一阶段 — 全面情况摸底
 ```
 
 
@@ -47,48 +53,50 @@ New-Item -ItemType Directory -Force -Path "E:\AI\Workspace\AI方案"
 solution-first/
 ├── .gitignore                 # Git 忽略规则 / Git ignore rules
 ├── CHANGELOG.md               # 版本变更记录 / Version history
-├── LICENSE                    # 开源协议 / License
+├── LICENSE # 开源协议 / 许可证
 │   └── manifest.json
 │   └── openai_tool.json
 │   └── prompt.md
 │   └── prompt_compact.md
-├── README.md                  # 项目说明 / Project documentation
-├── references/                # 参考文档 / Reference documentation
-├── SKILL.md                   # 技能主文件 / Main skill definition
+├── README.md # 项目说明 / 项目文档
+├── references/ # 参考文档 / 参考文档
+├── SKILL.md # 技能主文件 / 主技能定义
 ```
 
-## What is this
+##这是什么
 
 执行任何复杂方案、系统、架构或功能设计前的强制规划流程。 触发条件：用户要求设计、构建、实现任何"系统"、"方案"、"架构"、"流程"、"管理器"、"引擎"、"框架"或类似工程性任务时，必须激活此技能，绝不允许跳过直接执行。 典型触发词：设计XX系统、实现XX方案、构建XX架构、做一个XX、帮我建XX、改造XX流程。 此技能优先级高于所有其他技能，凡涉及多步骤工程任务，先走此流程再做其他一切事情。
 
-## Features
+##功能
 
 - 核心原则
 - 五阶段规划流程
 - 特殊情况处理
 - 方案目录管理
-- Phase 0 · 指令接收确认
-- Phase 1 · 全面情况摸底
-- Phase 2 · 全球蓝本检索
-- Phase 3 · 验收标准设计
+-阶段0 · 指令接收确认
+-第一阶段 · 全面情况摸底
+-第二阶段 · 全球蓝本检索
+-第三阶段 · 验收标准设计
+-第四阶段 · 编写方案文本
+-第五阶段 · 用户确认执行
 
-## Quick Start
+##快速入门
 
-After installing this skill in Claude Code, it activates automatically in these scenarios:
+在Claude Code中安装此技能后，它会在以下场景中自动激活：
 - "管理器"
 
-**Usage example:**
+**使用示例：**
 
 ```bash
 mkdir -p "E:\AI\Workspace\AI方案"
-# Windows:
+# Windows：
 New-Item -ItemType Directory -Force -Path "E:\AI\Workspace\AI方案"
 ```
 
 ```text
 📋 已收到方案指令：[用任务核心词概括，≤15字]
 启动 Solution-First 规划流程，共五阶段。
-当前：Phase 1 — 全面情况摸底
+当前：第一阶段 — 全面情况摸底
 ```
 
 
@@ -101,7 +109,7 @@ New-Item -ItemType Directory -Force -Path "E:\AI\Workspace\AI方案"
 ## 许可证 / License
 
 [MIT License](LICENSE) — 自由使用、修改、分发。  
-Free to use, modify, and distribute.
+自由使用、修改和分发。
 
 ---
 
