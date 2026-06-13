@@ -29,7 +29,7 @@
   
 ## 快速上手
 
-将此 skill 安装到 Claude Code 后，以下场景会自动激活：
+将此 skill 安装到 Claude Code / Codex / open claw / hermes agent / open code 后，以下场景会自动激活：
 - "管理器"
 
 **使用示例：**
